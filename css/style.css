@@ -10,11 +10,11 @@ img{
 }
 
 .container{
-    width: 95%;
+    width: 1280px;
     margin: 0 auto;
 }
 
-.navbar{
+.nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -22,17 +22,17 @@ img{
     padding-top: 45px;
 }
 
-.navbar img{
+.header__logo{
     width: 236px;
     height: 26px;
 }
 
-.nav-list{
+.nav__list{
     list-style-type: none;
     display: flex;
 }
 
-.nav-link{
+.nav__link{
     text-decoration: none;
     color: #83888F;
     text-transform: uppercase;
@@ -43,7 +43,7 @@ img{
     letter-spacing: 0.923077px;
 }
 
-.nav-link:hover{
+.nav__link:hover{
     color: #333D4B;
 }
 
@@ -52,31 +52,35 @@ img{
 
 /* ----- intro-head start ----- */
 
-.intro-head{
+.intro{
+    position: relative;
     margin-top: 45px;
-}
-
-.intro-head .container{
-    background-image: url(../img/intro-bg.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
     height: 600px;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    padding-left: 86px;
 }
 
-.intro-text h1{
+.intro__bg{
+    position: absolute;
+    left: 50%;
+    margin-left: -640px;
+    width: 1280px;
+    height: 100%;
+    border-radius: 10px;
+    background-image: url(../img/intro-bg.jpg);
+    z-index: -1;
+}
+
+.intro__title{
+    font-family: "Fraunces";
     color: #FEFCF7;
     font-weight: 900;
     font-size: 72px;
     line-height: 72px;
-    width: 493px;
     margin-bottom: 32px;
+    margin-left: 86px;
+    padding-top: 115px;
 }
 
-.intro-text p{
+.intro__desc{
     font-family: "Barlow";
     font-size: 16px;
     line-height: 26px;
@@ -84,6 +88,7 @@ img{
     opacity: 0.8;
     width: 445px;
     margin-bottom: 56px;
+    margin-left: 86px;
 }
 
 .link{
@@ -97,6 +102,7 @@ img{
     background: #0E8784;
     border-radius: 6px;
     padding: 15px 31px;
+    margin-left: 86px;
 }
 
 .link:hover{
@@ -113,8 +119,7 @@ img{
     margin-top: 200px;
 }
 
-
-.collection-bg{
+.collection__bg{
     position: absolute;
     font-family: "Fraunces";
     font-size: 155px;
@@ -122,6 +127,7 @@ img{
     background: linear-gradient(to top, rgba(254, 252, 247, 0.0001) 0%, #ccccc9);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
+    top: -30px;
     left: 0;
     right: 0;
     width: 1111px;
@@ -130,7 +136,7 @@ img{
     z-index: -1;
 }
 
-.collection-list{
+.collection__list{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -138,17 +144,17 @@ img{
     list-style-type: none;
 }
 
-.collection-list li{
+.collection__list li{
     text-align: center;
     width: 255px;
     margin: 15px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-top: 94px;
+    margin-top: 64px;
 }
 
-.collection-list h3{
+.collection__title{
     font-family: "Fraunces";
     font-weight: 900;
     font-size: 24px;
@@ -157,35 +163,35 @@ img{
     margin-bottom: 24px;
 }
 
-.collection-list p{
+.collection__desc{
     font-family: "Barlow";
     font-size: 16px;
     line-height: 26px;
     color: #333D4B;
 }
 
-.product-1::before{
+.collection__product-1::before{
     content: "";
     background-image: url(../img/kopi1.png);
     width: 255px;
     height: 193px;
     margin-bottom: 71px;
 }
-.product-2::before{
+.collection__product-2::before{
     content: "";
     background-image: url(../img/kopi2.png);
     width: 256px;
     height: 193px;
     margin-bottom: 71px;
 }
-.product-3::before{
+.collection__product-3::before{
     content: "";
     background-image: url(../img/kopi3.png);
     width: 256px;
     height: 193px;
     margin-bottom: 71px;
 }
-.product-4::before{
+.collection__product-4::before{
     content: "";
     background-image: url(../img/kopi4.png);
     background-size: contain;
@@ -200,13 +206,13 @@ img{
 /* ----- benefits start ----- */
 
 .benefits .container{
-    margin-top: 180px;
+    margin-top: 165px;
     background-color: #333D4B;
     border-radius: 10px;
     height: 580px;
 }
 
-.benefits h2{
+.benefits__title{
     font-family: "Fraunces";
     text-align: center;
     font-weight: 900;
@@ -217,7 +223,7 @@ img{
     margin-bottom: 32px;
 }
 
-.benefits-text{
+.benefits__text{
     width: 540px;
     margin: 0 auto;
     font-family: "Barlow";
@@ -228,14 +234,14 @@ img{
     opacity: 0.8;
 }
 
-.benefits-list{
+.benefits__list{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 86px;
 }
 
-.benefits-list li{
+.benefits__item{
     width: 350px;
     height: 382px;
     display: flex;
@@ -248,14 +254,14 @@ img{
     border-radius: 8px;
 }
 
-.benefits-list img{
+.benefits__img{
     width: 72px;
     height: 72px;
     margin-top: 72px;
     margin-bottom: 56px;
 }
 
-.benefits-list h3{
+.benefits__item-title{
     font-family: "Fraunces";
     font-weight: 900;
     font-size: 24px;
@@ -264,7 +270,7 @@ img{
     margin-bottom: 24px;
 }
 
-.benefits-list p{
+.benefits__desc{
     font-family: "Barlow";
     font-size: 16px;
     line-height: 26px;
@@ -281,7 +287,7 @@ img{
     padding-left: 85px;
 }
 
-.process h4{
+.process__title{
     font-family: "Fraunces";
     font-weight: 900;
     font-size: 24px;
@@ -289,7 +295,7 @@ img{
     color: #83888F;
 }
 
-.line{
+.process__line{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -300,7 +306,7 @@ img{
     margin-bottom: 82px;
 }
 
-.circle{
+.process__circle{
     display: inline-block;
     width: 31px;
     height: 31px;
@@ -309,18 +315,18 @@ img{
     border-radius: 50%;
 }
 
-.process-list{
+.process__list{
     display: flex;
     flex-wrap: wrap;
     list-style-type: none;
 }
 
-.process-item{
+.process__item{
     width: 285px;
     margin-right: 95px;
 }
 
-.process-item span{
+.process__item span{
     font-family: "Fraunces";
     font-weight: 900;
     font-size: 72px;
@@ -328,7 +334,7 @@ img{
     color: #FDD6BA;
 }
 
-.process-item h3{
+.process__item-title{
     width: 255px;
     font-family: "Fraunces";
     font-weight: 900;
@@ -339,7 +345,7 @@ img{
     margin-bottom: 42px;
 }
 
-.process-item p{
+.process__item-desc{
     font-family: "Barlow";
     font-size: 16px;
     line-height: 26px;
@@ -352,6 +358,10 @@ img{
 
 /* ----- footer start ----- */
 
+.footer{
+    margin-bottom: 88px;
+}
+
 .footer .container{
     display: flex;
     align-items: center;
@@ -360,41 +370,40 @@ img{
     margin-top: 200px;
 }
 
-.footer-list{
+.footer__list{
     display: flex;
     list-style-type: none;
     margin-left: 103px;
 }
 
-.footer-link{
+.footer__link{
     font-family: "Barlow";
     text-decoration: none;
     color: #83888F;
     font-weight: bold;
+    font-size: 12px;
     text-transform: uppercase;
     margin-right: 33px;
     letter-spacing: 0.923077px;
 }
 
-.footer-link:hover{
+.footer__link:hover{
     color: #FEFCF7;
 }
 
-.social-media{
+.footer__icons{
     margin-left: auto;
 }
 
-.social-media a{
+.footer__icon{
     font-size: 24px;
     color: #FEFCF7;
     margin-left: 24px;
 }
 
-.social-media a:hover{
+.footer__icon:hover{
     color: #FDD6BA;
 }
-
-
 
 /* ----- footer end ----- */
 
