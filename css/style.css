@@ -50,7 +50,7 @@ img{
 /* ----- header end ----- */
 
 
-/* ----- intro-head start ----- */
+/* ----- intro start ----- */
 
 .intro{
     position: relative;
@@ -91,6 +91,10 @@ img{
     margin-left: 86px;
 }
 
+.intro__link{
+    margin-left: 86px;
+}
+
 .link{
     display: inline-block;
     font-family: "Fraunces";
@@ -102,14 +106,13 @@ img{
     background: #0E8784;
     border-radius: 6px;
     padding: 15px 31px;
-    margin-left: 86px;
 }
 
 .link:hover{
     background: #66D2CF;
 }
 
-/* ----- intro-head end ----- */
+/* ----- intro end ----- */
 
 
 /* ----- collection start ----- */
@@ -324,6 +327,11 @@ img{
 .process__item{
     width: 285px;
     margin-right: 95px;
+    margin-bottom: 20px;
+}
+
+.process__item:last-child{
+    margin-right: 0;
 }
 
 .process__item span{
@@ -350,7 +358,10 @@ img{
     font-size: 16px;
     line-height: 26px;
     color: #333D4B;
-    margin-bottom: 64px;
+}
+
+.process__link{
+    margin-top: 44px;
 }
 
 /* ----- process end ----- */
